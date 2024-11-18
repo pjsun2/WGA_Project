@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F2EA">
+
+    <!-- 상단 안내 텍스트 -->
+    <TextView
+        android:id="@+id/textView_instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="167dp"
+        android:text="@string/successful"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView_instruction1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_instruction"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/together"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView_instruction2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_instruction1"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/welcome"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <!-- 가족 이미지 -->
+    <ImageView
+        android:id="@+id/imageView_family"
+        android:layout_width="301dp"
+        android:layout_height="270dp"
+        android:layout_below="@id/textView_instruction2"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="55dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/splash_scrren_family_image"
+        android:textStyle="bold" />
+
+    <!-- 시작 버튼 -->
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/rounded_beige_view"
+        android:elevation="1dp"
+        android:text="@string/start"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+</RelativeLayout>

@@ -1,0 +1,134 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F2EA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 이전 창으로 이동할 수 있는 버튼 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_back_arrow"
+                android:contentDescription="이전 화면으로 이동"
+                android:padding="10dp"/>
+        </RelativeLayout>
+
+        <!-- 질문 텍스트 표시 -->
+        <TextView
+            android:id="@+id/question_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:text="질문이 여기에 표시됩니다"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/question_text_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="질문에 대한 답변은 WGA 저장소에 기록돼요!"
+            android:textColor="#5B5B5B"
+            android:textSize="15sp" />
+
+        <!-- 로그인된 사용자의 답변 입력 영역 -->
+        <LinearLayout
+            android:id="@+id/answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_white_view">
+
+            <!-- 로그인된 사용자 이름 표시 -->
+            <TextView
+                android:id="@+id/id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사용자 이름"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <!-- 답변 입력을 위한 EditText -->
+            <EditText
+                android:id="@+id/answer_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="답변을 입력해 주세요"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:minHeight="120dp"
+                android:gravity="top"
+                android:background="@drawable/border"
+                android:padding="10dp"/>
+
+            <!-- 저장된 답변을 표시하는 TextView -->
+            <TextView
+                android:id="@+id/answer_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:minHeight="120dp"
+                android:gravity="top"
+                android:background="@drawable/border"
+                android:padding="10dp"
+                android:visibility="gone" />
+
+            <!-- 저장 버튼 -->
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:text="저장"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/rounded_brown_view" />
+
+            <!-- 수정 버튼 -->
+            <Button
+                android:id="@+id/edit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:text="수정"
+                android:textColor="#000000"
+                android:background="@drawable/rounded_gray_view"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 로그인된 사용자의 답변과는 다르게 border가 없는 스타일을 적용 -->
+        <LinearLayout
+            android:id="@+id/other_answers_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FFFFFF">
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,7 @@
+from transformers import cached_path, hf_hub_url
+
+# 모델 URL
+model_url = hf_hub_url("EleutherAI/gpt-j-6B", filename="pytorch_model.bin")
+# 캐시 경로 확인
+cached_model_path = cached_path(model_url)
+print(cached_model_path)

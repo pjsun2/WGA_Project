@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F2EA">
+
+    <!-- '우리 가족에게 코드를 공유해 보세요!' 안내 텍스트 -->
+    <TextView
+        android:id="@+id/textView_instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="179dp"
+        android:text="우리 가족에게 코드를 공유해 보세요!"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!-- 가족 코드 텍스트 -->
+    <TextView
+        android:id="@+id/family_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_instruction"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
+        android:text="코드가 생성되지 않았습니다"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <!-- 코드 생성 버튼 -->
+    <Button
+        android:id="@+id/button_generate_code"
+        android:layout_width="wrap_content"
+        android:background="@drawable/rounded_brown_view"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/family_code"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="코드 생성"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF" />
+
+    <!-- 코드 복사 버튼 -->
+    <Button
+        android:id="@+id/button_copy_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_brown_view"
+        android:layout_below="@id/button_generate_code"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="코드 복사"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_brown_view"
+        android:layout_below="@id/button_copy_code"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="다음"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:textColor="#FFFFFF" />
+</RelativeLayout>

@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F2EA">
+
+    <!-- 캘린더 제목 -->
+    <TextView
+        android:id="@+id/calendar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        android:text="캘린더"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold" />
+
+    <!-- Chevron Left Icon -->
+    <ImageView
+        android:id="@+id/chevron_left"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_below="@id/calendar_title"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/left_icon"
+        android:contentDescription="이전 달로 이동" />
+
+    <!-- Date Label -->
+    <TextView
+        android:id="@+id/date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calendar_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="2024년 11월"
+        android:textColor="#434343"
+        android:textSize="14sp" />
+
+    <!-- Chevron Right Icon -->
+    <ImageView
+        android:id="@+id/chevron_right"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_below="@id/calendar_title"
+        android:layout_toEndOf="@id/date_label"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/right_icon"
+        android:contentDescription="다음 달로 이동" />
+
+    <!-- Plus Icon -->
+    <ImageView
+        android:id="@+id/plus_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/plus_icon"
+        android:contentDescription="일정 추가" />
+
+    <!-- 중앙 메시지 박스 -->
+    <RelativeLayout
+        android:id="@+id/center_rectangle"
+        android:layout_width="344dp"
+        android:layout_height="663dp"
+        android:layout_below="@id/date_label"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/rounded_white_view"
+        android:elevation="1dp"
+        android:padding="16dp">
+
+        <!-- 안내 텍스트 -->
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="일정을 등록하면 모든 가족이 확인할 수 있어요!"
+            android:textColor="#5E5E5E"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <!-- Divider Line -->
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/bottom_navigation"
+        android:background="#C18871" />
+
+    <!-- 하단 네비게이션 바 -->
+    <RelativeLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#F5F2EA">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- 아이콘 1 -->
+            <ImageView
+                android:id="@+id/icon_one"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:src="@drawable/favorite"
+                android:contentDescription="즐겨찾기" />
+
+            <!-- 아이콘 2 -->
+            <ImageView
+                android:id="@+id/icon_two"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:src="@drawable/list"
+                android:contentDescription="리스트" />
+
+            <!-- 아이콘 3 -->
+            <ImageView
+                android:id="@+id/icon_three"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:src="@drawable/today_red"
+                android:contentDescription="오늘" />
+
+            <!-- 아이콘 4 -->
+            <ImageView
+                android:id="@+id/icon_four"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:src="@drawable/mail"
+                android:contentDescription="메일" />
+
+            <!-- 아이콘 5 -->
+            <ImageView
+                android:id="@+id/icon_five"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:src="@drawable/more_horiz"
+                android:contentDescription="더보기" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

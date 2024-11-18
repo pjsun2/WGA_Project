@@ -1,0 +1,305 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F2EA"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="35dp">
+
+        <!-- Sign Up 페이지 (1/2) -->
+        <TextView
+            android:id="@+id/signup_in_progress"
+            android:layout_width="149dp"
+            android:layout_height="26dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/signup_in_progress"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/id_text"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/signup_instruction"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/rounded_white_view"
+            android:fontFamily="sans-serif"
+            android:hint="@string/id"
+            android:inputType="text"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#848484"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/id_error_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_text"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="5dp"
+            android:text="아이디 형식이 맞지 않습니다."
+            android:textColor="#FF0000"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/idDC_error_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_text"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="5dp"
+            android:text="중복된 아이디 입니다"
+            android:textColor="#FF0000"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/password_text"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_below="@id/id_text"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/rounded_white_view"
+            android:fontFamily="sans-serif"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#848484"
+            android:textSize="12sp" />
+
+        <!-- 비밀번호 형식 오류 메시지 -->
+        <TextView
+            android:id="@+id/password_error_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password_text"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="5dp"
+            android:text="비밀번호 형식이 맞지 않습니다."
+            android:textColor="#FF0000"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/password_check_text"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_below="@id/password_error_message"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/rounded_white_view"
+            android:fontFamily="sans-serif"
+            android:hint="@string/password_check"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#848484"
+            android:textSize="12sp" />
+
+        <!-- 비밀번호 일치하지 않을 때 표시되는 메시지 -->
+        <TextView
+            android:id="@+id/password_match_error_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password_check_text"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="5dp"
+            android:text="비밀번호가 일치하지 않습니다."
+            android:textColor="#FF0000"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/signup_instruction"
+            android:layout_width="297dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signup_in_progress"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="0dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/signup_instruction"
+            android:textColor="#848484"
+            android:textSize="14sp" />
+
+        <!-- Personal Information (2/2) -->
+        <TextView
+            android:id="@+id/personal_info_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password_check_text"
+            android:layout_marginTop="50dp"
+            android:text="개인정보"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/name_text"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/personal_info_title"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/rounded_white_view"
+            android:fontFamily="sans-serif"
+            android:hint="@string/name_required"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#BDBDBD"
+            android:textSize="12sp"
+            android:gravity="center" />
+
+        <EditText
+            android:id="@+id/nickname_text"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/name_text"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/rounded_white_view"
+            android:fontFamily="sans-serif"
+            android:hint="@string/nickname_required"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#BDBDBD"
+            android:textSize="12sp"
+            android:gravity="center" />
+
+        <EditText
+            android:id="@+id/phone_text"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/nickname_text"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/rounded_white_view"
+            android:fontFamily="sans-serif"
+            android:hint="@string/phone_optional"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#BDBDBD"
+            android:textSize="12sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/Sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phone_text"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:text="성별"
+            android:textColor="#848484"
+            android:textSize="14sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Sub"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <RadioButton
+                android:layout_width="60dp"
+                android:layout_height="48dp"
+                android:buttonTint="#9E9C9C"
+                android:fontFamily="sans-serif"
+                android:text="@string/gender_female"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:layout_width="60dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="60dp"
+                android:buttonTint="#9E9C9C"
+                android:fontFamily="sans-serif"
+                android:text="@string/gender_male"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:layout_width="60dp"
+                android:layout_height="48dp"
+                android:buttonTint="#9E9C9C"
+                android:fontFamily="sans-serif"
+                android:text="@string/gender_other"
+                android:textColor="#000000" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/date_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_below="@id/radioGroup"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rounded_brown_view"
+            android:hint="생년월일 선택"
+            android:focusable="false"
+            android:inputType="none"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <!-- 다음 및 이전 버튼 -->
+        <Button
+            android:id="@+id/next_button_background"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/date_text_view"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rounded_brown_view"
+            android:text="회원가입"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/return_button_background"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/next_button_background"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_gray_view"
+            android:text="이전"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+</ScrollView>

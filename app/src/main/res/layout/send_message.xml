@@ -1,0 +1,209 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F2EA">
+
+    <!-- "우리 가족에게 편지를 보낼 수 있어요!" -->
+    <TextView
+        android:id="@+id/send_letter_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="74dp"
+        android:fontFamily="sans-serif"
+        android:text="우리 가족에게 편지를 보낼 수 있어요!"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <!-- 보관함, 타임 캡슐, 보내기 아이콘 그룹 -->
+    <LinearLayout
+        android:id="@+id/icon_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/send_letter_prompt"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <!-- 보관함 아이콘과 텍스트 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginEnd="40dp">
+
+            <ImageView
+                android:id="@+id/folder_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/folder" />
+
+            <TextView
+                android:id="@+id/folder_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="보관함"
+                android:textColor="#C18871"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif" />
+        </LinearLayout>
+
+        <!-- 타임 캡슐 아이콘과 텍스트 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginEnd="40dp">
+
+            <ImageView
+                android:id="@+id/time_capsule_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/schedule" />
+
+            <TextView
+                android:id="@+id/time_capsule_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="타임 캡슐"
+                android:textColor="#C18871"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif" />
+        </LinearLayout>
+
+        <!-- 보내기 아이콘과 텍스트 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/send_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/send_send" />
+
+            <TextView
+                android:id="@+id/send_text"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="보내기"
+                android:textColor="#C18871"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 메시지 박스 -->
+    <RelativeLayout
+        android:id="@+id/message_box"
+        android:layout_width="318dp"
+        android:layout_height="338dp"
+        android:layout_below="@id/icon_group"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="334dp"
+        android:background="@drawable/rounded_white_view"
+        android:elevation="2dp"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/title_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif"
+            android:text="제목을 입력해 주세요"
+            android:textColor="#BDBDBD"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/line_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/title_input"
+            android:layout_marginBottom="10dp"
+            android:background="#BDBDBD" />
+
+        <TextView
+            android:id="@+id/content_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_separator"
+            android:fontFamily="sans-serif"
+            android:text="내용을 입력해 주세요"
+            android:textColor="#BDBDBD"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <!-- 하단 네비게이션 바 -->
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/bottom_navigation"
+        android:background="#C18871" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#F5F2EA">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/icon_one"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:src="@drawable/icon_heart" />
+
+            <ImageView
+                android:id="@+id/icon_two"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:src="@drawable/list" />
+
+            <ImageView
+                android:id="@+id/icon_three"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:src="@drawable/today" />
+
+            <ImageView
+                android:id="@+id/icon_four"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:src="@drawable/mail" />
+
+            <ImageView
+                android:id="@+id/icon_five"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:src="@drawable/more_horiz" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

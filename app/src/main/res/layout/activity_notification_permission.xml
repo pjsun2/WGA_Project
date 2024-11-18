@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F2EA">
+
+    <!-- 상단 텍스트 -->
+    <TextView
+        android:id="@+id/textView_instruction"
+        android:layout_width="208dp"
+        android:layout_height="23dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="167dp"
+        android:text="@string/permission_prompt"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- 이미지 -->
+    <ImageView
+        android:id="@+id/imageView_family"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_instruction"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/notifications" />
+
+    <!-- 알림 정보 텍스트 -->
+    <TextView
+        android:id="@+id/notification_info"
+        android:layout_width="333dp"
+        android:layout_height="49dp"
+        android:layout_below="@+id/textView_instruction"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/notification_info"
+        android:textAlignment="center"
+        android:textColor="#848484"
+        android:textSize="15sp" />
+
+    <!-- 다음 버튼 -->
+    <Button
+        android:id="@+id/allow_noti_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notification_info"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="알림 권한 허용" />
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/next_button"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:background="@drawable/rounded_beige_view"
+        android:elevation="1dp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F2EA">
+
+    <!-- Welcome Message -->
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="167dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="@string/welcome_message"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- WGA Message -->
+    <TextView
+        android:id="@+id/wga_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcome_text"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="@string/wga_message"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <!-- Schedule Message -->
+    <TextView
+        android:id="@+id/schedule_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wga_text"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="@string/schedule_message"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <!-- Goods Message -->
+    <TextView
+        android:id="@+id/goods_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/schedule_text"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="@string/goods_message"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <!-- Question Message -->
+    <TextView
+        android:id="@+id/question_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goods_text"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="@string/question_message"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <!-- Letter Message -->
+    <TextView
+        android:id="@+id/letter_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/question_text"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="@string/letter_message"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <!-- Button Background -->
+    <RelativeLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/rounded_beige_view"
+        android:elevation="1dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:id="@+id/textView_get_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/next_button"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

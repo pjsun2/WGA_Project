@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F2EA">
+
+    <!-- 가족 이름 입력 안내 텍스트 -->
+    <TextView
+        android:id="@+id/textView_instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="167dp"
+        android:text="@string/family_name_prompt"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- 입력 필드 힌트 텍스트 -->
+    <TextView
+        android:id="@+id/private_view_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/view_beige"
+        android:layout_marginTop="232dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/private_view_hint"
+        android:textColor="#848484"
+        android:textSize="12sp" />
+
+    <!-- 이름 입력 힌트 텍스트 -->
+    <EditText
+        android:id="@+id/name_hint"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_below="@id/private_view_hint"
+        android:background="@drawable/rounded_white_view"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:fontFamily="sans-serif"
+        android:hint="@string/name_hint"
+        android:textColorHint="#BDBDBD"
+        android:textSize="15sp"
+        android:elevation="2dp"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:textColor="#000000"
+    />
+    <!-- 하단 베이지색 버튼 -->
+    <Button
+        android:id="@+id/view_beige"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/rounded_beige_view"
+        android:elevation="1dp"
+        android:text="다음"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:gravity="center"/>
+
+</RelativeLayout>
